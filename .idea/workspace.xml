@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31b00f8a-4c8e-4b87-80ba-0110cbbdeeae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/app/test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/test1.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -48,13 +47,9 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/app/test1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -79,15 +74,15 @@
         <option value="$PROJECT_DIR$/app/settings.py" />
         <option value="$PROJECT_DIR$/app/urls.py" />
         <option value="$PROJECT_DIR$/app/templates/app/1231.html" />
-        <option value="$PROJECT_DIR$/app/templates/app/index.html" />
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/templates/app/test1.html" />
+        <option value="$PROJECT_DIR$/app/templates/app/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="568" />
-    <option name="y" value="167" />
+    <option name="x" value="585" />
+    <option name="y" value="178" />
     <option name="width" value="839" />
     <option name="height" value="500" />
   </component>
@@ -160,17 +155,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="568" y="167" width="839" height="500" extended-state="0" />
+    <frame x="585" y="178" width="839" height="500" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47352025" visible="true" weight="0.16978776" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47352025" visible="true" weight="0.16978776" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3258427" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50239235" side_tool="true" weight="0.31861198" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.599681" weight="0.35913312" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49760765" weight="0.3178082" />
       <window_info id="Structure" order="1" sideWeight="0.5264797" side_tool="true" weight="0.23032904" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.49925596" visible="true" weight="0.3780822" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49925596" visible="true" weight="0.3780822" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49702382" weight="0.3754386" />
       <window_info id="Favorites" order="2" sideWeight="0.5217391" side_tool="true" weight="0.102678575" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -306,17 +301,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/test1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/app/test1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
