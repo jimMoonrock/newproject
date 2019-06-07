@@ -7,6 +7,8 @@ urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'blog/', include('blog.urls')) # 'blog/'- путь нашего приложения    hello - наша функция
 ]
+Таким образом, любому URL-адресу, начинающемуся с admin/, Django будет находить соответствующее view (представление).
+
 
 #from django.contrib import admin
 from django.urls import path
@@ -30,5 +32,5 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', viewer, name='viewer_url')
+    path('',viewer,name='viewer_url')
 ]

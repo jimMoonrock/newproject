@@ -99,7 +99,6 @@ def post_detail(request, slug): # Создаем функцию для detail
 
 from django.urls import path
 from django.shortcuts import render
-
 def viewer(request):
-    names = ['Oleg', 'Masha', 'Olja', 'Ksu']
+    names = ['Valera','Max','John','Ron']
     return render(request, 'app/index.html', context={'names':names})
