@@ -3,95 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
+    {% load bootstrap3 %}
+    <script src="{% bootstrap_jquery_url %}"></script>
+    {% bootstrap_javascript %}
+    {% bootstrap_css %}
 </head>
 <body>
-    {% block title %}
-        Hello man!
-    {% endblock %}
-<form>
-        <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label for="validationServer01">First name *</label>
-            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name"  required>
-            <div class="valid-feedback">
-                <br>
-            </div>
-        </div>
 
-        <div class="col-md-4 mb-3">
-        <label for="validationServer02">Last name *</label>
-        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" required>
-        <div class="valid-feedback">
-          <br>
-      </div>
-    </div>
-
-    <div class="col-md-4 mb-3">
-      <label for="validationServerUsername">Username *</label>
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupPrepend3"></span>
-            </div>
-            <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3" required>
-            <div class="invalid-feedback">
-                <br>
-        </div>
-      </div>
-    </div>
-    </div>
-
-        <div class="form-row">
-            <div class="col-md-6 mb-3">
-                <label for="validationServer03">Country *</label>
-                <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Country" required>
-                <div class="invalid-feedback">
-            <br>
-            </div>
-            </div>
-
-  <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationServer03">City *</label>
-      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="City" required>
-      <div class="invalid-feedback">
-        <br>
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-3">
-      <label for="validationServer04">State *</label>
-      <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="State" required>
-      <div class="invalid-feedback">
-        <br>
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-3">
-      <label for="validationServer05">specify your gender *</label>
-      <input type="text" class="form-control is-invalid" id="validationServer06" placeholder="Male or Female" required>
-      <div class="invalid-feedback">
-        <br>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-group">
-      <div class="form-check">
-          <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
-          <label class="form-check-label" for="invalidCheck3">
-              Agree to terms and conditions *
-      </label>
-      <div class="invalid-feedback">
-        <br>
-      </div>
-      </div>
-  </div>
-            <button class="btn btn-primary" type="submit">Complete registration</button>
-</form>
 <br>
-    {% block content %}
-        DYaDYA tut poka nichego netu
-    {% endblock %}
+<form>
+    <div class="form-group row">
+    <label for="inputLogin" class="col-sm-1 col-form-label">Login: </label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="inputLogin" placeholder="Input your login">
+    </div>
+  </div>
+
+
+    <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-1 col-form-label">Email: </label>
+    <div class="col-sm-2">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Input your email">
+    </div>
+  </div>
+
+
+      <div class="form-group row">
+    <label for="inputEmail4" class="col-sm-1 col-form-label">Repeat Email: </label>
+    <div class="col-sm-2">
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Repeat your email">
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-1 col-form-label">Password: </label>
+    <div class="col-sm-2">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Input your password">
+    </div>
+  </div>
+
+    <div class="form-group row">
+    <label for="inputPassword4" class="col-sm-1 col-form-label">Password: </label>
+    <div class="col-sm-2">
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Repeat your password">
+    </div>
+    </div>
+
+
+     <div class="form-group row">
+    <label for="inputCity" class="col-sm-1 col-form-label">City: </label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" id="inputCity" placeholder="Input your city">
+    </div>
+    </div>
+
+
+
+    <button class="btn btn-primary" type="submit">Complete registration</button>
+
+
+
+</form>
 
 
 
