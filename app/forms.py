@@ -15,4 +15,4 @@ FormЭкземпляр имеет is_valid()метод, который запу�
 Вся форма при первом отображении будет выглядеть так'''
 from django import forms
 class Login_form(forms.Form):
-    input_login = forms.CharField(label="Your login",max_length=100)
+    input_login = forms.CharField(label="Your login",max_length=15)
