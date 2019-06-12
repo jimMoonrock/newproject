@@ -15,7 +15,7 @@ FormЭкземпляр имеет is_valid()метод, который запу�
 Вся форма при первом отображении будет выглядеть так'''
 from django import forms
 class form_for_user(forms.Form):
-    input_login = forms.CharField(label="Your login",max_length=15)
+    login_form = forms.CharField(label="Your login",max_length=15)
     email_form = forms.EmailField(max_length=15)
     password_form = forms.PasswordInput()
     city_form = forms.CharField(label="Your city",max_length=12)
