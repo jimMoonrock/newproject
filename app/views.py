@@ -97,9 +97,39 @@ def post_detail(request, slug): # Создаем функцию для detail
 '''
 
 
+'''Вид ¶
+Данные формы, отправленные обратно на веб-сайт Django, обрабатываются представлением, обычно тем же, в 
+котором опубликована форма. Это позволяет нам повторно использовать одну и ту же логику.
+
+Чтобы обработать форму, нам нужно создать ее экземпляр в представлении для URL, где мы хотим, чтобы она
+ была опубликована:
+ 
+ 
+ '''
+from django.http import HttpResponseRedirect
 from django.urls import path
 from django.shortcuts import render
+from .forms import *
+
 def viewer(request):
     #  return render(request, 'app/index.html',context={'names':names})
     names = ['Valera','Max','John','Ron']
     return render(request, 'app/basic.html')
+
+
+
+def get_Login(request):
+    # если это запрос(request) POST, нам нужно обработать данные формы
+    if request.method == 'POST':
+    # создать экземпляр формы и заполнить его данными из запроса(request_:
+        form = form_for_user(request.POST)
+        # проверить, действительно ли правильный ввод
+        if form.is_valid():
+            # обрабатывать данные в form.cleaned_data по мере необходимости
+            # перенаправить на новый URL("/thanks/")
+            return HttpResponseRedirect("/thanks/")
+
+    #  если GET (или любой другой метод) мы создадим пустую форму
+    else:
+        form = form_for_user()
+    return render(request, 'base.html', {'form':form})
