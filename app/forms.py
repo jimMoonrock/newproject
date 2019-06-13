@@ -14,8 +14,8 @@ FormЭкземпляр имеет is_valid()метод, который запу�
 поместите данные формы в ее cleaned_data атрибут.
 Вся форма при первом отображении будет выглядеть так'''
 from django import forms
-class form_for_user(forms.Form):
-    login_form = forms.CharField(label="Your login",max_length=15)
-    email_form = forms.EmailField(max_length=15)
-    password_form = forms.PasswordInput()
-    city_form = forms.CharField(label="Your city",max_length=12)
+class Registration(forms.Form):
+    login = forms.CharField(label="Your login",max_length=15)
+    email = forms.EmailField(max_length=15)
+    password = forms.PasswordInput()
+    city = forms.CharField(label="Your city",max_length=12)
