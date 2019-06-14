@@ -23,10 +23,9 @@ class Registration(forms.Form):
     city = forms.CharField(label="Your city",max_length=12,  error_messages={"required":"Input your city"})
 
 # Валидация проходит в этом методе
-def clean(self):
-    # Определяем правило валидиации
-    if self.cleaned_data.get('password') != self.cleaned_data.get('password_again'):
-        # Выбрасываем ошибку, если пароли не савпали
-        raise forms.ValidationError("Passwords must match ")
-
-    return self.cleaned_data
+    def clean(self):
+        # Определяем правило валидиации
+        if self.cleaned_data.get('password') != self.cleaned_data.get('password_again'):
+            # Выбрасываем ошибку, если пароли не савпали
+            raise forms.ValidationError("Passwords must match ")
+        return self.cleaned_data
