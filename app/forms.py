@@ -26,8 +26,8 @@ class Registration(forms.Form):
 # Валидация проходит в этом методе
 def clean(self):
     # Определяем правило валидиации
-    if self.cleaned_data.get('email') != self.cleaned_data.get('email_agein'):
-        raise forms.ValidationError('Emails must match')
+    if self.cleaned_data.get('email') != self.cleaned_data.get('email_agein'): # Если фармы не равны между собой
+        raise forms.ValidationError('Emails must match') # То вывести ошибку валидации
     elif self.cleaned_data.get('password') != self.cleaned_data.get('password_again'):
         # Выбрасываем ошибку, если пароли не савпали
         raise forms.ValidationError("Passwords must match ")
