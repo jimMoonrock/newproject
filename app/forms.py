@@ -18,13 +18,18 @@ from django import forms
 class Registration(forms.Form):
     login = forms.CharField(label="Your login",max_length=15, error_messages={"required":"Input your login"})
     email = forms.EmailField(max_length=15, error_messages={"required":"Input your email"})
+    email_again = forms.EmailField(max_length=15, error_messages={"required":"Repeat your email"})
     password = forms.PasswordInput()
+    password_again = forms.PasswordInput()
     city = forms.CharField(label="Your city",max_length=12,  error_messages={"required":"Input your city"})
 
 # Валидация проходит в этом методе
 def clean(self):
     # Определяем правило валидиации
-    if self.cleaned_data.get('password') != self.cleaned_data.get('password_again'):
+    if self.cleaned_data.get('email') != self.cleaned_data.get('email_agein'):
+        raise forms.ValidationError('Emails must match')
+    elif self.cleaned_data.get('password') != self.cleaned_data.get('password_again'):
         # Выбрасываем ошибку, если пароли не савпали
-        raise forms.ValidationError("Password ")
+        raise forms.ValidationError("Passwords must match ")
+
     return self.cleaned_data

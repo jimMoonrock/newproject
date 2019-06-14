@@ -12,9 +12,8 @@
 
 <br>
 <form method="post"> <!-- Чтобы не могли взаламать странмцу,токен - генерирует рандомные цифры -->
-    {% csrf_token %}
 
-    {{form}}
+    {{form.as_p}}
 
     <div class="form-group row">
     <label for="login1" class="col-sm-1 col-form-label">Login: </label>
@@ -40,9 +39,9 @@
   </div>
 
       <div class="form-group row">
-    <label for="email2" class="col-sm-1 col-form-label">Repeat Email: </label>
+    <label for="email_again1" class="col-sm-1 col-form-label">Repeat Email: </label>
     <div class="col-sm-2">
-      <input type="text" class="form-control" id="email2" name = {{email}}
+      <input type="text" class="form-control" id="email_again1" name = {{email_again}}
                   placeholder="Repeat your email" value ="Repeat your email">
     </div>
   </div>
@@ -61,10 +60,10 @@
 
 
     <div class="form-group row">
-    <label for="password2" class="col-sm-1 col-form-label">Repeat Password: </label>
+    <label for="password_again1" class="col-sm-1 col-form-label">Repeat Password: </label>
     <div class="col-sm-2">
-      <input type="password" class="form-control" id="password2" name = {{password}}
-                  placeholder="Repeat your password" value ="Input your password">
+      <input type="password" class="form-control" id="password_again1" name = {{password_again}}
+                  placeholder="Repeat your password" value ="Repeat your password">
     </div>
   </div>
 
@@ -83,7 +82,7 @@
 
     <button class="btn btn-primary" type="submit">Complete registration</button>
 
-
+    {% csrf_token %}
 
 <!--{% block content %}
     <h1>New post</h1>
