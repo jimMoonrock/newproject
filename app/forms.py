@@ -1,4 +1,5 @@
 ''''''
+
 '''Это определяет Form класс с одним полем ( your_name). Мы применили к полю удобную для человека метку, которая будет 
 отображаться в момент <label>ее рендеринга (хотя в этом случае label мы указали на самом деле тот же самый, который 
 будет сгенерирован автоматически, если мы его опускаем).
@@ -15,7 +16,15 @@ FormЭкземпляр имеет is_valid()метод, который запу�
 Вся форма при первом отображении будет выглядеть так'''
 from django import forms
 class Registration(forms.Form):
-    login = forms.CharField(label="Your login",max_length=15)
-    email = forms.EmailField(max_length=15)
+    login = forms.CharField(label="Your login",max_length=15, error_messages={"required":"Input your login"})
+    email = forms.EmailField(max_length=15, error_messages={"required":"Input your email"})
     password = forms.PasswordInput()
-    city = forms.CharField(label="Your city",max_length=12)
+    city = forms.CharField(label="Your city",max_length=12,  error_messages={"required":"Input your city"})
+
+# Валидация проходит в этом методе
+def clean(self):
+    # Определяем правило валидиации
+    if self.cleaned_data.get('password') != self.cleaned_data.get('password_again'):
+        # Выбрасываем ошибку, если пароли не савпали
+        raise forms.ValidationError("Password ")
+    return self.cleaned_data

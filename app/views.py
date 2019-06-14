@@ -122,7 +122,7 @@ def get_Login(request):
     # если это запрос(request) POST, нам нужно обработать данные формы
     if request.method == 'POST':
     # создать экземпляр формы и заполнить его данными из запроса(request_:
-        form = form_for_user(request.POST)
+        form = Registration(request.POST)
         # проверить, действительно ли правильный ввод
         if form.is_valid():
             # обрабатывать данные в form.cleaned_data по мере необходимости
@@ -131,5 +131,5 @@ def get_Login(request):
 
     #  если GET (или любой другой метод) мы создадим пустую форму
     else:
-        form = form_for_user()
+        form = Registration()
     return render(request, 'base.html', {'form':form})
